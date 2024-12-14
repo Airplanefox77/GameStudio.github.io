@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <button onclick="loadGame()">Load Game</button>
+        <button onclick="saveGame()">Save Game</button>
+        <input type="file" id="upload" onchange="uploadImage(event)" />
+        <button onclick="setMode('topDown')">Top-Down</button>
+        <button onclick="setMode('sideView')">Side View</button>
+    </div>
+    <div id="studio">
+        <div id="codeEditor">
+            <textarea id="codeArea" placeholder="Write your code here..."></textarea>
+            <button onclick="executeCode()">Run Code</button>
+        </div>
+        <div id="assetManager">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="modelEditor">
+            <h3>Model Editor</h3>
+            <input type="file" id="assetUpload" onchange="addAsset(event)" multiple />
+            <div id="assets"></div>
+            <button id="importButton" style="display: none;" onclick="importAssets()">Import to Viewport</button>
+        </div>
+    </div>
+    <div id="console">
+        <textarea id="consoleInput" placeholder="Enter JavaScript code here..."></textarea>
+        <button onclick="runConsoleCode()">Run</button>
+        <div id="consoleOutput"></div>
+    </div>
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

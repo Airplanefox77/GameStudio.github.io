@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    margin: 20px;
+}
+
+#studio {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#codeEditor {
+    flex: 1;
+    margin: 10px;
+}
+
+#codeArea {
+    width: 100%;
+    height: 600px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+#assetManager {
+    flex: 1;
+    margin: 10px;
+}
+
+#gameCanvas {
+    border: 1px solid black;
+    background-color: #fff;
+    width: 100%;
+    height: 600px;
+    position: relative; /* Ensure positioned elements stay within the canvas */
+}
+
+#modelEditor {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+#assets {
+    margin-top: 10px;
+}
+
+.asset {
+    margin: 10px 0;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.asset input[type="text"] {
+    width: calc(100% - 10px);
+    margin: 5px 5px 0 5px;
+}
+
+#assetUpload {
+    margin-bottom: 10px;
+}
+
+#console {
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+#consoleInput {
+    width: 100%;
+    height: 150px;
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#consoleOutput {
+    width: 100%;
+    height: 150px;
+    font-family: monospace;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+}
+
+.selected {
+    border: 2px solid blue; /* Blue border for selected models */
+}
